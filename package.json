@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prismify/oc-bootstrap-theme.git"
+    "url": "git+https://github.com/tfprado/october-starter-kit"
   },
   "bugs": {
-    "url": "https://github.com/prismify/oc-bootstrap-theme/issues"
+    "url": "https://github.com/tfprado/october-starter-kit/issues"
   },
   "keywords": [
     "october",
@@ -27,19 +27,12 @@
     "bootstrap"
   ],
   "author": {
-    "email": "hello@prismify.org",
-    "name": "Prismify Solutions",
-    "url": "https://prismify.org"
+    "email": "thiago@to-it.ca",
+    "name": "Thiago Prado",
+    "url": "https://to-it.ca"
   },
-  "maintainers": [
-    {
-      "name": "Sergey Sukhorukov",
-      "email": "algoriq@prismify.org",
-      "url": "https://prismify.org"
-    }
-  ],
   "license": "MIT",
-  "homepage": "https://github.com/prismify/oc-bootstrap-theme",
+  "homepage": "https://github.com/tfprado/october-starter-kit",
   "devDependencies": {
     "cross-env": "^5.2.0",
     "laravel-mix": "^5.0.*",

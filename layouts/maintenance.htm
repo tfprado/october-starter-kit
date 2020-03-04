@@ -1,0 +1,27 @@
+description = "Under Construction layout"
+==
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% partial 'app/head' %}
+</head>
+
+<body class="app layout-{{ this.layout.id }} page-{{ this.page.id }}">
+
+    <div class="app-container">
+        <main id="app-content" class="app-content" role="main">
+            {% page %}
+        </main>
+
+        <footer id="app-footer" class="app-footer">
+            {% partial 'app/footer' %}
+        </footer>
+
+    </div>
+
+    {% partial 'app/js' %}
+    {% scripts %}
+</body>
+
+</html>

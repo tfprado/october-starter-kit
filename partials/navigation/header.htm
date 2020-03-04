@@ -1,0 +1,38 @@
+description = "Main Navigation"
+
+[viewBag]
+
+[staticMenu]
+code = "default-navigation"
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+==
+<nav class="navbar navbar-expand-lg navbar-light {% if this.layout.id == 'fixed-navigation' %} fixed-top-navigation {% endif %}"
+    style="background-color: white">
+    <a class="navbar-brand mx-auto" href="/"><img src="//placehold.it/300x75" class="img-fluid"
+            alt="Logo Here" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto">
+            <!--<li class="nav-item active">
+                <a class="nav-link {% if this.page.id == 'index' %} active {% endif %}" href="{{ 'index'|page }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>-->
+            {% partial 'navigation/nav-link' items=staticMenu.menuItems class='mx-2' %}
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0" action="{{ 'search' | page }}" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+    </div>
+</nav>

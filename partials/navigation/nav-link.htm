@@ -1,0 +1,17 @@
+description = "Bootstrap nav item, takes link page filename and link text as parameters"
+==
+{% for item in items %}
+<li class="nav-item {{ class }} {{ item.isActive or item.isChildActive ? 'active' : '' }}
+    {{ item.items ? 'dropdown' : '' }}">
+    <a {% if item.items %}id="{{ item.id }}" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" {% else %} class="nav-link {{ item.class }}" {% endif %}
+        href="{{ item.url }}">
+        {{ item.title }}
+
+        {% if item.items %}<span class="caret"></span>{% endif %}
+    </a>
+
+    {% if item.items %}
+        {% partial 'navigation/dropdown-link' dropdown=item.id items=item.items class='dropdown-menu' %}
+    {% endif %}
+</li>
+{% endfor %}

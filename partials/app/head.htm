@@ -1,0 +1,12 @@
+description = "Site Header"
+==
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="{{ this.page.meta_description }}">
+<meta name="title" content="{{ this.page.meta_title }}">
+
+<link rel="icon" href="{{ 'assets/public/images/favicon.ico'|theme }}">
+<link rel="stylesheet" href="{{ 'assets/public/css/app.css'|theme }}">
+{% styles %}
+
+<title>{{ this.page.title }} - {{ this.theme.app_name }}</title>
